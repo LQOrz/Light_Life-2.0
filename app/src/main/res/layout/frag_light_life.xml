@@ -1,0 +1,353 @@
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawerlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.design.widget.AppBarLayout
+                android:id="@+id/appBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fitsSystemWindows="true">
+
+                <!--<android.support.v7.widget.Toolbar-->
+                <!--android:id="@+id/toolbar"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:background="?attr/colorPrimary"-->
+                <!--android:paddingRight="16dp"-->
+                <!--android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"-->
+                <!--app:layout_scrollFlags="scroll|enterAlways"-->
+                <!--app:popupTheme="@style/ThemeOverlay.AppCompat.Light">-->
+                <!--<ImageView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="left"-->
+                <!--android:src="@drawable/ic_star" />-->
+                <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="center_horizontal"-->
+                <!--android:layout_weight="1"-->
+                <!--android:text="light life"-->
+                <!--android:textStyle="italic" />-->
+                <!--<ImageView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="right"-->
+                <!--android:src="@drawable/ic_more" />-->
+                <!--</android.support.v7.widget.Toolbar>-->
+
+                <android.support.design.widget.TabLayout
+                    android:id="@+id/tablayout"
+                    style="@style/style_tablayout"
+                    app:tabBackground="@color/colorPrimaryDark"
+                    app:tabIndicatorColor="@color/colorwhite"
+                    app:tabSelectedTextColor="@color/colorwhite"
+                    app:tabTextColor="@color/coloruntab">
+
+                </android.support.design.widget.TabLayout>
+            </android.support.design.widget.AppBarLayout>
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/appBar">
+
+            </android.support.v4.view.ViewPager>
+        </RelativeLayout>
+
+        <com.example.lq.light_life.ui.widget.floatingactionbutton.MultiFloatingActionButton
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/floating_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:switchFabColor="@color/colorAccent"
+            app:switchFabIcon="@drawable/ic_add_w"
+            app:layout_behavior="com.example.lq.light_life.ui.widget.floatingactionbutton.HideBehavior"
+            app:animationMode="scale">
+            <!-- app:layout_behavior="com.fjl.floatbutton.widget.FabBehavior"
+            -->
+            <com.example.lq.light_life.ui.widget.floatingactionbutton.TagFabLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:tagText="发布云打印"
+                >
+                <android.support.design.widget.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/check"
+                    app:backgroundTint="#468cb7"
+                    app:fabSize="mini" />
+            </com.example.lq.light_life.ui.widget.floatingactionbutton.TagFabLayout>
+
+            <com.example.lq.light_life.ui.widget.floatingactionbutton.TagFabLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:tagText="发布二手咨询"
+                >
+                <android.support.design.widget.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_star"
+                    app:backgroundTint="#818aa7"
+                    app:fabSize="mini" />
+            </com.example.lq.light_life.ui.widget.floatingactionbutton.TagFabLayout>
+            <!--
+                <com.mycompany.readmark.customview.FloatingActionButton.TagFabLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:tagText="Send mail"
+                    >
+                    <android.support.design.widget.FloatingActionButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ic_add_white_48dp"
+                        app:backgroundTint="#4BB7A7"
+                        app:fabSize="mini" />
+                </com.mycompany.readmark.customview.FloatingActionButton.TagFabLayout>
+            -->
+        </com.example.lq.light_life.ui.widget.floatingactionbutton.MultiFloatingActionButton>
+        <!--悬浮按钮布局-->
+        <!--<android.support.design.widget.FloatingActionButton-->
+        <!--android:id="@+id/fab"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="bottom|end"-->
+        <!--android:layout_margin="16dp"-->
+        <!--android:src="@drawable/check"-->
+        <!--app:elevation="8dp"-->
+        <!--FAB的应用-->
+        <!--<RelativeLayout-->
+            <!--android:id="@+id/rlAddBill"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:background="#80000000"-->
+            <!--android:visibility="gone">-->
+
+            <!--<LinearLayout-->
+                <!--android:id="@+id/ll01"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentBottom="true"-->
+                <!--android:layout_marginBottom="100dp"-->
+                <!--android:orientation="horizontal">-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="center_vertical"-->
+                    <!--android:layout_toLeftOf="@+id/miniFab01"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:gravity="right"-->
+                    <!--android:paddingBottom="5dp"-->
+                    <!--android:text="销售单"-->
+                    <!--android:textColor="@android:color/white"-->
+                    <!--android:textSize="15sp" />-->
+
+                <!--<android.support.design.widget.FloatingActionButton-->
+                    <!--android:id="@+id/miniFab01"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginRight="25dp"-->
+                    <!--android:src="@drawable/check"-->
+                    <!--app:backgroundTint="@color/colorAccent"-->
+                    <!--app:elevation="5dp"-->
+                    <!--app:fabSize="mini" />-->
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+                <!--android:id="@+id/ll02"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_above="@+id/ll01"-->
+                <!--android:orientation="horizontal">-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="center_vertical"-->
+                    <!--android:layout_toLeftOf="@+id/miniFab02"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:gravity="right"-->
+                    <!--android:paddingBottom="5dp"-->
+                    <!--android:text="销售退货"-->
+                    <!--android:textColor="@android:color/white"-->
+                    <!--android:textSize="15sp" />-->
+                <!--<android.support.design.widget.FloatingActionButton-->
+                    <!--android:id="@+id/miniFab02"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginRight="25dp"-->
+                    <!--android:src="@drawable/ic_add_w"-->
+                    <!--app:backgroundTint="@color/colorPrimary"-->
+                    <!--app:elevation="5dp"-->
+                    <!--app:fabSize="mini" />-->
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+                <!--android:id="@+id/ll03"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_above="@+id/ll02"-->
+                <!--android:orientation="horizontal">-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="center_vertical"-->
+                    <!--android:layout_toLeftOf="@+id/miniFab02"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:gravity="right"-->
+                    <!--android:paddingBottom="5dp"-->
+                    <!--android:text="收款单"-->
+                    <!--android:textColor="@android:color/white"-->
+                    <!--android:textSize="15sp" />-->
+
+                <!--<android.support.design.widget.FloatingActionButton-->
+                    <!--android:id="@+id/miniFab03"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginRight="25dp"-->
+                    <!--android:src="@drawable/book"-->
+                    <!--app:backgroundTint="@color/colorAccent"-->
+                    <!--app:elevation="5dp"-->
+                    <!--app:fabSize="mini" />-->
+            <!--</LinearLayout>-->
+
+            <!--<android.support.design.widget.FloatingActionButton-->
+                <!--android:id="@+id/fab01Add"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentBottom="true"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_marginBottom="20dp"-->
+                <!--android:layout_marginRight="15dp"-->
+                <!--android:src="@drawable/ic_star"-->
+                <!--app:backgroundTint="#31bfcf"-->
+                <!--app:elevation="5dp"-->
+                <!--app:fabSize="normal"-->
+                <!--app:rippleColor="#e7d161" />-->
+        <!--</RelativeLayout>-->
+
+        <!--<RelativeLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:orientation="vertical">-->
+            <!--<com.example.lq.light_life.FloatingDraftButton-->
+                <!--android:id="@+id/floatingActionButton"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--app:rippleColor="@color/colorPrimary"-->
+                <!--app:backgroundTint="@color/colorPrimary"-->
+                <!--android:src="@drawable/ic_star"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--app:elevation="6dp"-->
+                <!--app:borderWidth="0dp"-->
+                <!--app:pressedTranslationZ="12dp"-->
+                <!--app:fabSize="mini"-->
+                <!--/>-->
+            <!--<android.support.design.widget.FloatingActionButton-->
+                <!--android:id="@+id/floatingActionButton_liveness"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--app:rippleColor="@color/colorPrimary"-->
+                <!--app:backgroundTint="@color/colorAccent"-->
+                <!--android:src="@drawable/ic_star"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--app:elevation="6dp"-->
+                <!--app:borderWidth="0dp"-->
+                <!--app:pressedTranslationZ="12dp"-->
+                <!--app:fabSize="mini"-->
+                <!--android:visibility="invisible"-->
+                <!--/>-->
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="发布二手咨询"-->
+                <!--/>-->
+            <!--<android.support.design.widget.FloatingActionButton-->
+                <!--android:id="@+id/floatingActionButton_2"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--app:rippleColor="@color/colorPrimary"-->
+                <!--app:backgroundTint="@color/colorAccent"-->
+                <!--android:src="@drawable/ic_star"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--app:elevation="6dp"-->
+                <!--app:borderWidth="0dp"-->
+                <!--app:pressedTranslationZ="12dp"-->
+                <!--app:fabSize="mini"-->
+                <!--android:visibility="invisible"-->
+                <!--/>-->
+            <!--<android.support.design.widget.FloatingActionButton-->
+                <!--android:id="@+id/floatingActionButton_3"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--app:rippleColor="@color/colorPrimary"-->
+                <!--app:backgroundTint="@color/colorAccent"-->
+                <!--android:src="@drawable/ic_star"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--app:elevation="6dp"-->
+                <!--app:borderWidth="0dp"-->
+                <!--app:pressedTranslationZ="12dp"-->
+                <!--app:fabSize="mini"-->
+                <!--android:visibility="invisible"-->
+                <!--/>-->
+            <!--<android.support.design.widget.FloatingActionButton-->
+                <!--android:id="@+id/floatingActionButton_4"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--app:rippleColor="@color/colorPrimary"-->
+                <!--app:backgroundTint="@color/colorAccent"-->
+                <!--android:src="@drawable/ic_star"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--app:elevation="6dp"-->
+                <!--app:borderWidth="0dp"-->
+                <!--app:pressedTranslationZ="12dp"-->
+                <!--app:fabSize="mini"-->
+                <!--android:visibility="invisible"-->
+                <!--/>-->
+            <!--<android.support.design.widget.FloatingActionButton-->
+                <!--android:id="@+id/floatingActionButton_5"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--app:rippleColor="@color/colorPrimary"-->
+                <!--app:backgroundTint="@color/colorAccent"-->
+                <!--android:src="@drawable/ic_star"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--app:elevation="6dp"-->
+                <!--app:borderWidth="0dp"-->
+                <!--app:pressedTranslationZ="12dp"-->
+                <!--app:fabSize="mini"-->
+                <!--android:visibility="invisible"-->
+                <!--/>-->
+        <!--</RelativeLayout>-->
+
+    </android.support.design.widget.CoordinatorLayout>
+    <!--下面是侧面隐藏个人信息界面布局-->
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/nv_menu" />
+
+</android.support.v4.widget.DrawerLayout>

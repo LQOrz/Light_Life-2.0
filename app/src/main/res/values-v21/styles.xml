@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="SecondActivityTheme" parent="AppTheme">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    <string-array name="SchoolName">
+        <item>西安科技大学</item>
+        <item>西安工程大学</item>
+    </string-array>
+    <string-array name="AcademyName">
+        <item>计算机科学与技术学院</item>
+        <item>人文与外语学院</item>
+    </string-array>
+    <string-array name="jsj_DepartmentName">
+        <item>计算机科学与技术系</item>
+        <item>网络工程系</item>
+        <item>软件工程系</item>
+        <item>信息科学与技术系</item>
+    </string-array>
+    <string-array name="rw_DepartmentName">
+        <item>英语系</item>
+        <item>日语系</item>
+        <item>德语系</item>
+        <item>法语系</item>
+    </string-array>
+    <string-array name="Sex">
+        <item>英语系</item>
+        <item>日语系</item>
+        <item>德语系</item>
+        <item>法语系</item>
+    </string-array>
+</resources>

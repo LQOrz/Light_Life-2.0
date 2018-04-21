@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/me_my_star" android:icon="@drawable/my_star" android:title="我的关注" />
+        <item android:id="@+id/me_my_fork" android:icon="@drawable/shoucang" android:title="我的收藏" />
+        <item android:id="@+id/me_my_fabu" android:icon="@drawable/me_fabu" android:title="我的发布" />
+        <item android:id="@+id/me_my_footprint" android:icon="@drawable/me_footprint" android:title="我的足迹" />
+        <item android:id="@+id/me_thing_aboutme" android:icon="@drawable/relativeme" android:title="与我相关"/>
+        <item android:id="@+id/me_kefu" android:icon="@drawable/me_kefu" android:title="客服中心"/>
+        <item android:id="@+id/me_caogao" android:icon="@drawable/me_caogao" android:title="草稿箱"/>
+        <item android:id="@+id/me_about" android:icon="@drawable/me_about" android:title="关于"/>
+    </group>
+
+</menu>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.lq.light_life.ui.activity.RegisterActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="注册"
+            android:textStyle="bold"
+            android:textColor="@color/colorwhite"
+            android:textSize="24dp"/>
+
+    </android.support.v7.widget.Toolbar>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:rowCount="6"
+            android:paddingLeft="32dp"
+            android:paddingTop="32dp"
+            android:paddingRight="32dp">
+            <TextView
+                android:layout_column="0"
+                android:text="学校："
+                android:gravity="right"
+                android:textSize="16sp" />
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/SchoolName"
+                android:entries="@array/SchoolName"
+                android:layout_column="1">
+
+            </Spinner>
+            <TextView
+                android:layout_column="0"
+                android:text="学院："
+                android:gravity="right"
+                android:textSize="16sp" />
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/AcademyName"
+                android:entries="@array/AcademyName"
+                android:layout_column="1">
+
+            </Spinner>
+            <TextView
+                android:layout_column="0"
+                android:text="专业："
+                android:gravity="right"
+                android:textSize="16sp"/>
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/DepartmentName"
+                android:entries="@array/jsj_DepartmentName"
+                android:layout_column="1">
+
+            </Spinner>
+            <TextView
+                android:layout_column="0"
+                android:text="姓名："
+                android:gravity="right"
+                android:textSize="16sp"/>
+            <TextView
+                android:layout_column="0"
+                android:text="性别："
+                android:gravity="right"
+                android:textSize="16sp"/>
+            <!--<RadioGroup-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/selectSex"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:layout_column="1">-->
+            <!--<RadioButton-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_column="1"-->
+            <!--android:text="男"-->
+            <!--android:textSize="16sp"/>-->
+            <!--<RadioButton-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_column="1" />-->
+            <!--</RadioGroup>-->
+
+            <TextView
+                android:layout_column="0"
+                android:text="学号："
+                android:gravity="right"
+                android:textSize="16sp"
+                android:layout_columnWeight="0.02"/>
+            <TextView
+                android:layout_column="0"
+                android:text="系："
+                android:gravity="right"
+                android:textSize="16sp"
+                android:layout_columnWeight="0.02"/>
+        </GridLayout>
+    </LinearLayout>
+
+
+
+</LinearLayout>

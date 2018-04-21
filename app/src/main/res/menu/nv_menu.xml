@@ -1,0 +1,41 @@
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_call"
+            android:icon="@drawable/nv_call"
+            android:title="Call"/>
+        <item
+            android:id="@+id/nav_friends"
+            android:icon="@drawable/nv_friend"
+            android:title="Friends"/>
+        <item
+            android:id="@+id/nav_location"
+            android:icon="@drawable/nv_location"
+            android:title="Location"
+            android:checkable="true" />
+        <item
+            android:id="@+id/nav_mail"
+            android:icon="@drawable/nv_email"
+            android:title="Mail"/>
+        <item
+            android:id="@+id/nav_task"
+            android:icon="@drawable/book"
+            android:title="Task"/>
+    </group>
+    <group>
+        <item
+            android:id="@+id/settings"
+            android:icon="@drawable/settings"
+            android:title="设置"
+            />
+        <item
+            android:id="@+id/qiut"
+            android:icon="@drawable/quit"
+            android:title="注销"
+            />
+
+    </group>
+
+
+</menu>
